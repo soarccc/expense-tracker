@@ -1,9 +1,25 @@
+import datetime
+
+
 def add_expense(expenses):
-    pass  # TODO
+    date = datetime.datetime.now(tz=datetime.timezone.utc).date().isoformat()
+    amount = int(input("Enter the amount: "))
+    category = input("Enter the category: ")
+    desc = input("Description: ")
+
+    expense = {
+        "Date": date,
+        "Amount": amount,
+        "Category": category,
+        "Description": desc,
+    }
+    expenses.append(expense)
+
 
 def list_expenses(expenses):
-    pass  # TODO
+    print(expenses)
 
+    
 def main():
     expenses = []
     while True:
